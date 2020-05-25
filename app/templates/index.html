@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Cats vs Dogs</title>
+    </head>
+    <body>
+        <div>
+            <h2>Select a cat or a dog image to upload</h2>
+            {% if filename %}
+                <div>
+                    <img src="{{ url_for('display_image', filename=filename) }}" style="max-width:400px; max-height:400px;">
+                </div>
+            {% endif %}
+            <form method="post" action="/" enctype="multipart/form-data">
+                <dl>
+                    <p>
+                        <input class="form-control-file" type="file" name="file" autocomplete="off" required>
+                    </p>
+                </dl>
+                <p>
+                    <input type="submit" value="Submit">
+                </p>
+            </form>
+            <p>
+                {% with messages = get_flashed_messages() %}
+                    {% if messages %}
+                        {% for message in messages %}
+                        <h4>{{ message }}<h4>
+                        {% endfor %}
+                    {% endif %}
+                {% endwith %}
+            </p>
+            <button><a href="/train/" style="text-decoration:none;">Train Model</a></button>
+        </div>
+    </body>
+</html>
