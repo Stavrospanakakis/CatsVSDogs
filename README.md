@@ -4,6 +4,9 @@ Cats vs Dogs is a simple app I created in order to start practicing with Machine
 and it recognises if it is a cat or a dog. Also you can train the model again if you want by clicking one button.
 I didn't really focus on the UI/UX but on the algorithm of the neural network.
 
+## Demo
+![Demo](./demo.gif)
+
 ## Installation
 I used the [Kaggle Cats and Dogs Dataset](https://www.microsoft.com/en-us/download/details.aspx?id=54765) to train it.
 
