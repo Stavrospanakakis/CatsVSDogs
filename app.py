@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 from ai.predict import Predict
 from ai.train.train import Train
 
-app = Flask(__name__, template_folder='app/templates')
+app = Flask(__name__, template_folder='app/templates', static_folder='app/static')
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
